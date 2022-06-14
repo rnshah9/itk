@@ -1,0 +1,11 @@
+project: itk
+target: itk
+image: ghcr.io/rnshah9/playground:itk
+# testsuite:
+#   - file://Modules/ThirdParty/HDF5/src/itkhdf5/config/cmake_ext_mod/hdf.bmp
+#t
+cmds:
+  - cmd: /repo/build/bin/ImageReadExportVTK /test.bmp out
+    filepath: /test.bmp
+    env:
+      DISABLE_SMOKETEST: '1'
